@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="apk-4-js.js"></script>
+<script type="text/javascript" src="apk-4-utils.js"></script>
+<script type="text/javascript" src="../common/apk-utils.js"></script>
+<link href="apk-4-style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="content">
+		<div id="left-side">
+            <div class="image">
+                <img src="source/blank.jpg" id="upper-image" alt="upper-image"/>
+            </div>
+            <div class="image">
+                <img src="source/blank.jpg" id="middle-image" alt="middle-image"/>
+            </div>
+            <div class="image">
+                <img src="source/blank.jpg" id="bottom-image" alt="bottom-image"/>
+            </div>
+		</div>
+
+        <div id="right-side">
+            <div id="outputs">
+                <div class="label">
+                    <span>
+                        <b>Ilość elementów w pierwszej turze:</b>
+                        <output id="first-turn">0</output>
+                    </span>
+                </div>
+                <div class="label">
+                    <span>
+                        <b>Ilość elementów w drugiej turze:</b>
+                        <output id="second-turn">0</output>
+                    </span>
+                </div>
+                <div class="label">
+                    <span>
+                        <b>Ilość elementów w trzeciej turze:</b>
+                        <output id="third-turn">0</output>
+                    </span>
+                </div>
+            </div>
+            <div id="notification">
+                <p id="notification-paragraph"></p>
+            </div>
+            <div id="buttons-container">
+                <div id="release-button-container">
+                    <button type="button" id="release-button"  OnClick="releaseElements()" disabled>Wypuść elementy</button>
+                </div>
+                <div id="start-button-container">
+                    <button type="button" id="start-button" OnClick="clientReady()" disabled>Uruchom proces</button>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

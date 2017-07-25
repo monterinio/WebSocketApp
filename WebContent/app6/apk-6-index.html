@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="apk-6-js.js"></script>
+<script type="text/javascript" src="apk-6-utils.js"></script>
+<script type="text/javascript" src="../common/apk-utils.js"></script>
+<link href="apk-6-style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="content">
+		<div id="inner-content">
+			<div id="title">
+				<b>Główna szafa sterownicza</b>
+			</div>
+			<div id="measurement-container">
+				<div class="row">
+                    <div class="label">
+                        <p>STYCZNIK 1A</p>
+                    </div>
+                    <div class="item" >
+                        <label class="switch">
+                        <input type="checkbox" id="inputContactor1a" onclick="sendControlState(event);" disabled>
+                        <div class="slider"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <p>STYCZNIK 1B</p>
+                    </div>
+                    <div class="item" >
+                        <label class="switch">
+                        <input type="checkbox" id="inputContactor1b" onclick="sendControlState(event);" disabled>
+                        <div class="slider"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <p>STYCZNIK 1C</p>
+                    </div>
+                    <div class="item" >
+                        <label class="switch">
+                        <input type="checkbox" id="inputContactor1c" onclick="sendControlState(event);" disabled>
+                        <div class="slider"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <p>STYCZNIK 2A</p>
+                    </div>
+                    <div class="item" >
+                        <label class="switch">
+                        <input type="checkbox" id="inputContactor2a" onclick="sendControlState(event);" disabled>
+                        <div class="slider"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <p>PRZEKAŹNIK 3A</p>
+                    </div>
+                    <div class="item" >
+                        <label class="switch">
+                        <input type="checkbox" id="inputContactor3a" onclick="sendControlState(event);" disabled>
+                        <div class="slider"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        <p>PRZEKAŹNIK 3B</p>
+                    </div>
+                    <div class="item" >
+                        <label class="switch">
+                        <input type="checkbox" id="inputContactor3b" onclick="sendControlState(event);" disabled>
+                        <div class="slider"></div>
+                    </div>
+                </div>
+			</div>
+
+			<div id="notification">
+				<p id="notification-paragraph"></p>
+			</div>
+			<div id="start-button-container">
+				<button type="button" id="start-button" OnClick="clientReady()"
+					disabled>Uruchom proces</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="websocket.js"></script>
+<script src="admin-utils.js"></script>
+<script src="login-script.js"></script>
+<script src="client-1-aux-func.js"></script>
+<script src="client-2-3-aux-func.js"></script>
+<script src="client-4-aux-func.js"></script>
+<script src="client-5-aux-func.js"></script>
+<script src="client-6-aux-func.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="wrapper">
+		<h1>Panel zarządzania procesami</h1>
+		<div id="start-process-button-container">
+			<div class="select-style">
+				<select id="combo-box">
+	  				<option value="ProcesA">Proces A</option>
+	  				<option value="ProcesB">Proces B</option>
+	  				<option value="ProcesUzytkownika">Proces użytkownika</option>
+				</select>
+			</div>
+			<button type="button" id="start-process-button" OnClick="startProcess()"><span>Uruchom</span></button>
+			<button type="button" id="stop-process-button" OnClick="stopProcess()"><span>Zatrzymaj</span></button>
+		</div>
+		<h3>Status klientów:</h3>
+
+		<div id="content">
+
+		</div>
+	</div>
+
+</body>
+</html>

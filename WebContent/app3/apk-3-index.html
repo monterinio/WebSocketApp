@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="apk-3-js.js"></script>
+<script type="text/javascript" src="apk-3-utils.js"></script>
+<script type="text/javascript" src="../common/apk-utils.js"></script>
+<link href="apk-3-style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="content">
+		<div id="left-side">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Napięcie 1</th>
+						<th>Napięcie 2</th>
+						<th>Materiał</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>200</td>
+						<td>500</td>
+						<td>Materiał A</td>
+					</tr>
+
+					<tr>
+						<td>250</td>
+						<td>150</td>
+						<td>Materiał B</td>
+					</tr>
+
+					<tr>
+						<td>325</td>
+						<td>250</td>
+						<td>Materiał C</td>
+					</tr>
+
+					<tr>
+						<td>400</td>
+						<td>400</td>
+						<td>Materiał D</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>1000</td>
+						<td>Materiał E</td>
+					</tr>
+					<tr>
+						<td>860</td>
+						<td>580</td>
+						<td>Materiał F</td>
+					</tr>
+					<tr>
+						<td>900</td>
+						<td>1500</td>
+						<td>Materiał G</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div id="right-side">
+			<div class="sliders">
+				<div class="label">
+					<span> <b>Napięcie 1:</b> <output id="outputVoltage1">0</output>
+					</span>
+				</div>
+				<div class="item">
+					<input type="range" min="0" max="1000" step="5" value="0"
+						id="inputVoltage1"
+						onchange="outputVoltage1.value = inputVoltage1.value"
+						onmouseup="sendControlState(event, 'outputVoltage1')" disabled />
+				</div>
+			</div>
+
+			<div class="sliders">
+				<div class="label">
+					<span> <b>Napięcie 2:</b> <output id="outputVoltage2">0</output>
+					</span>
+				</div>
+				<div class="item">
+					<input type="range" min="0" max="1500" step="5" value="0"
+						id="inputVoltage2"
+						onchange="outputVoltage2.value = inputVoltage2.value"
+						onmouseup="sendControlState(event, 'outputVoltage2')" disabled />
+				</div>
+			</div>
+
+
+			<div id="notification">
+				<p id="notification-paragraph"></p>
+			</div>
+
+			<div id="start-button-container">
+				<button type="button" id="start-button" OnClick="clientReady()"
+					disabled>Uruchom proces</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

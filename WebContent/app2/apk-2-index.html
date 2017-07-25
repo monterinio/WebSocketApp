@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="apk-2-js.js"></script>
+<script type="text/javascript" src="apk-2-utils.js"></script>
+<script type="text/javascript" src="../common/apk-utils.js"></script>
+<link href="apk-2-style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="content">
+		<div id="left-side">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Nacisk</th>
+						<th>Prędkość</th>
+						<th>Materiał</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>0.1</td>
+						<td>500</td>
+						<td>Materiał A</td>
+					</tr>
+
+					<tr>
+						<td>0.15-0.25</td>
+						<td>750</td>
+						<td>Materiał B</td>
+					</tr>
+
+					<tr>
+						<td>0.35</td>
+						<td>500</td>
+						<td>Materiał C</td>
+					</tr>
+
+					<tr>
+						<td>0.35</td>
+						<td>750</td>
+						<td>Materiał D</td>
+					</tr>
+					<tr>
+						<td>0.65</td>
+						<td>1000</td>
+						<td>Materiał E</td>
+					</tr>
+					<tr>
+						<td>0.75</td>
+						<td>1000</td>
+						<td>Materiał F</td>
+					</tr>
+					<tr>
+						<td>0.95</td>
+						<td>1500</td>
+						<td>Materiał G</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div id="right-side">
+			<div class="sliders">
+				<div class="label">
+					<span> <b>Prędkość:</b> <output id="outputVelocity">0</output>
+					</span>
+				</div>
+				<div class="item">
+					<input type="range" min="0" max="1500" step="50" value="0"
+						id="inputVelocity"
+						onchange="outputVelocity.value = inputVelocity.value"
+						onmouseup="sendControlState(event, 'outputVelocity')" disabled />
+				</div>
+			</div>
+
+			<div class="sliders">
+				<div class="label">
+					<span> <b>Nacisk:</b> <output id="outputPressure">0</output>
+					</span>
+				</div>
+				<div class="item">
+					<input type="range" min="0" max="1" step="0.01" value="0"
+						id="inputPressure"
+						onchange="outputPressure.value = inputPressure.value"
+						onmouseup="sendControlState(event, 'outputPressure')" disabled />
+				</div>
+			</div>
+
+
+			<div id="notification">
+				<p id="notification-paragraph"></p>
+			</div>
+
+			<div id="start-button-container">
+				<button type="button" id="start-button" OnClick="clientReady()"
+					disabled>Uruchom proces</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin login panel</title>
+<link href="login-style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <div class="container">
+    <h1 class="welcome">PANEL ADMINISTRATORA</h1>
+        <div class="card card-container">
+        <h2 class='login_title text-center'>Logowanie</h2>
+        <hr>
+
+            <form class="form-signin" action="AdminLoginServlet" method="post">
+                <span id="reauth-email" class="reauth-email"></span>
+                <p class="input_title">Login</p>
+                <input type="text" id="inputEmail" name="username" class="login_box" placeholder="Nazwa użytkownika" required autofocus>
+                <p class="input_title">Hasło</p>
+                <input type="password" id="inputPassword" name="password" class="login_box" placeholder="******" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary" type="submit">Zaloguj</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

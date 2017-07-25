@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Application-1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="apk-1-js.js"></script>
+    <script type="text/javascript" src="apk-1-utils.js"></script>
+    <script type="text/javascript" src="../common/apk-utils.js"></script>
+    <link href="apk-1-style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="image">
+            <img src="source/background.jpg" id="image" alt="Image preview" />
+        </div>
+
+        <div id="list-group">
+            <div class="row">
+                <div class="label">
+                    <p>Zawór 1</p>
+                </div>
+                <div class="item" >
+                    <label class="switch">
+                    <input type="checkbox" id="inputValve1" onclick="sendControlState(event);" disabled>
+                    <div class="slider"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label">
+                    <p>Zawór 2</p>
+                </div>
+                <div class="item">
+                    <label class="switch">
+                    <input type="checkbox" id="inputValve2" onclick="sendControlState(event);" disabled>
+                    <div class="slider"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label">
+                    <p>Silnik</p>
+                </div>
+                <div class="item">
+                    <input type="radio" name="silnik" id="inputMotor3" onclick="sendControlState(event);" disabled/> Silnik A <br>
+                    <input type="radio" name="silnik" id="inputMotor4" onclick="sendControlState(event);" disabled/> Silnik B <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label">
+                    <p>Warunki</p>
+                </div>
+                <div class="item">
+                    <input type="checkbox" name="warunki" id="inputCheckbox5" onclick="sendControlState(event);" disabled/> Oddymianie <br>
+                    <input type="checkbox" name="warunki" id="inputCheckbox6" onclick="sendControlState(event);" disabled/> Filtrowanie <br>
+                </div>
+            </div>
+
+                <div id="notification">
+                    <p id="notification-paragraph"></p>
+                </div>
+				<div id="start-button-container">
+                    <button type="button" id="start-button" OnClick="clientReady()" disabled>Uruchom proces</button>
+                </div>
+
+        </div>  
+    </div>
+</body>
+
+</html>
